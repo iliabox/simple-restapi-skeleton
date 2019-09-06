@@ -1,0 +1,10 @@
+nelmio_api_doc:
+    models: { use_jms: false }
+    documentation:
+        info:
+            title: RestApi
+            description: RestApi
+            version: 1.0.0
+    areas: # to filter documented areas
+        path_patterns:
+            - ^/api(?!/doc(?:\.json)?$) # Accepts routes under /api except /api/doc
