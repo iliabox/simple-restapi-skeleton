@@ -4,9 +4,9 @@ namespace App\Controller;
 
 use App\Entity\ClassRoom;
 use App\Doctrine as UOW;
+use App\Query\ClassRoomListQuery;
 use App\RequestObject\RequestCreateClassRoom;
 use App\RequestObject\RequestUpdateClassRoomActive;
-use Doctrine\ORM\EntityManagerInterface;
 use Nelmio\ApiDocBundle\Annotation\Model;
 use Ramsey\Uuid\Uuid;
 use Swagger\Annotations as SWG;
@@ -35,9 +35,9 @@ class ClassRoomController extends AbstractController
      *     methods={"GET"},
      * )
      */
-    public function list(EntityManagerInterface $em)
+    public function list(ClassRoomListQuery $query)
     {
-        $entities = $em->getRepository(ClassRoom::class)->findAll();
+        $entities = $query();
 
         return $this->json($entities);
     }
