@@ -1,19 +1,37 @@
-FROM alpine:latest
+FROM composer:latest AS composer
+FROM php:7.4-alpine
 
 ENV LC_ALL en_US.UTF-8
 ENV LANG en_US.UTF-8
 ENV WD=/var/www/symfony
 ENV COMPOSER_MEMORY_LIMIT=-1
 
-RUN apk --no-cache add \
-    composer curl sqlite \
-    php7-curl php7-pcntl php7-intl php7-dom php7-mbstring php7-opcache php7-xml php7-xsl php7-sysvsem php7-fileinfo php7-simplexml php7-pdo php7-gd php7-ctype php7-sqlite3 php7-pdo_sqlite php7-bcmath php7-calendar php7-iconv php7-mbstring php7-tokenizer php7-apcu
+COPY --from=composer /usr/bin/composer /usr/bin/composer
 
-COPY . $WD
+RUN apk --no-cache add \
+        sqlite \
+    && apk --no-cache add \
+        pcre-dev ${PHPIZE_DEPS} \
+    && pecl install \
+        xdebug \
+        apcu \
+    && docker-php-ext-enable \
+        xdebug \
+        apcu \
+    && docker-php-ext-configure \
+        opcache --enable-opcache \
+    && docker-php-ext-install \
+        opcache \
+    && docker-php-source delete \
+    && apk del pcre-dev ${PHPIZE_DEPS} \
+    && rm -rf /tmp/* /var/cache/apk/*
+
 WORKDIR $WD
-RUN composer install -n --no-progress \
+COPY . $WD
+RUN composer install -n --no-progress --classmap-authoritative --apcu-autoloader \
     && php bin/console d:d:c \
     && php bin/console d:s:c \
-    && php bin/console d:f:l -n
+    && php bin/console d:f:l -n \
+    && php bin/console c:c
 
 CMD ["php", "-S", "0.0.0.0:8000", "-t", "public/"]
