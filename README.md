@@ -1,4 +1,4 @@
-# Symfony 4.3 RestApi Skeleton
+# Symfony 4.4 RestApi Skeleton
 
 ### Installation
 1. Download source code.
