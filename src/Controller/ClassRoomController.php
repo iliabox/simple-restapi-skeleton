@@ -20,7 +20,9 @@ use Symfony\Component\Routing\Annotation\Route;
 class ClassRoomController extends AbstractController
 {
     /**
-     * @SWG\Tag(name="ClassRoom", description="List of ClassRooms")
+     * List of ClassRooms
+     *
+     * @SWG\Tag(name="ClassRoom")
      * @SWG\Response(
      *     response=200,
      *     description="Returns list of ClassRooms",
@@ -43,7 +45,9 @@ class ClassRoomController extends AbstractController
     }
 
     /**
-     * @SWG\Tag(name="ClassRoom", description="View ClassRoom by id")
+     * View ClassRoom by id
+     *
+     * @SWG\Tag(name="ClassRoom")
      * @SWG\Response(
      *     response=200,
      *     description="Returns one ClassRoom",
@@ -62,7 +66,9 @@ class ClassRoomController extends AbstractController
     }
 
     /**
-     * @SWG\Tag(name="ClassRoom", description="Enable/Disable ClassRoom by id")
+     * Enable/Disable ClassRoom by id
+     *
+     * @SWG\Tag(name="ClassRoom")
      * @SWG\Parameter(
      *     name="body",
      *     in="body",
@@ -87,7 +93,9 @@ class ClassRoomController extends AbstractController
     }
 
     /**
-     * @SWG\Tag(name="ClassRoom", description="Create ClassRoom")
+     * Create ClassRoom
+     *
+     * @SWG\Tag(name="ClassRoom")
      * @SWG\Parameter(
      *     name="body",
      *     in="body",
@@ -120,7 +128,9 @@ class ClassRoomController extends AbstractController
     }
 
     /**
-     * @SWG\Tag(name="ClassRoom", description="Delete ClassRoom by id")
+     * Delete ClassRoom by id
+     *
+     * @SWG\Tag(name="ClassRoom")
      * @SWG\Response(
      *     response="204",
      *     description="Returned when successful",
