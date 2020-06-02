@@ -2,9 +2,10 @@
 
 namespace App\RequestObject;
 
+use MccApiTools\RequestObjectBundle\Model\RequestableInterface;
 use Symfony\Component\Validator\Constraints;
 
-class RequestCreateClassRoom implements RequestObjectInterface
+class RequestCreateClassRoom implements RequestableInterface
 {
     /**
      * @var string

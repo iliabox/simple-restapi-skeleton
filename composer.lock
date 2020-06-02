@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "df5110cbae5ef463266ce6d9cad34268",
+    "content-hash": "1842afb7eb10994aa2968a9593d56f79",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -1570,6 +1570,57 @@
                 }
             ],
             "time": "2020-05-20T16:45:56+00:00"
+        },
+        {
+            "name": "mcc-api-tools/request-object-bundle",
+            "version": "0.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/iliabox/request-object-bundle.git",
+                "reference": "f9332c6b6499272517abf5abde4cd75c97847076"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/iliabox/request-object-bundle/zipball/f9332c6b6499272517abf5abde4cd75c97847076",
+                "reference": "f9332c6b6499272517abf5abde4cd75c97847076",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "php": "^7.4",
+                "symfony/config": "^4.0|^5.0",
+                "symfony/dependency-injection": "^4.0|^5.0",
+                "symfony/http-foundation": "^4.0|^5.0",
+                "symfony/http-kernel": "^4.0|^5.0",
+                "symfony/serializer": "^4.0|^5.0",
+                "symfony/validator": "^4.0|^5.0"
+            },
+            "require-dev": {
+                "roave/security-advisories": "dev-master"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "symfony": {
+                    "allow-contrib": false
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "MccApiTools\\RequestObjectBundle\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Elias Bulychov",
+                    "email": "iliabulychov+git@gmail.com"
+                }
+            ],
+            "description": "Simple RequestObject",
+            "time": "2020-05-30T01:46:57+00:00"
         },
         {
             "name": "nelmio/api-doc-bundle",

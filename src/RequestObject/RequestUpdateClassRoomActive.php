@@ -2,9 +2,10 @@
 
 namespace App\RequestObject;
 
+use MccApiTools\RequestObjectBundle\Model\RequestableInterface;
 use Symfony\Component\Validator\Constraints;
 
-class RequestUpdateClassRoomActive implements RequestObjectInterface
+class RequestUpdateClassRoomActive implements RequestableInterface
 {
 
     /**
