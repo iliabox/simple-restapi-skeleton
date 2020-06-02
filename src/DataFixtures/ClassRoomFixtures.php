@@ -4,8 +4,7 @@ namespace App\DataFixtures;
 
 use App\Entity\ClassRoom;
 use Doctrine\Bundle\FixturesBundle\Fixture;
-use Doctrine\Common\Persistence\ObjectManager;
-use Ramsey\Uuid\Uuid;
+use Doctrine\Persistence\ObjectManager;
 
 class ClassRoomFixtures extends Fixture
 {

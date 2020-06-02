@@ -3,16 +3,13 @@
 namespace App\RequestObject;
 
 use MccApiTools\RequestObjectBundle\Model\RequestableInterface;
-use Symfony\Component\Validator\Constraints;
+use Symfony\Component\Validator\Constraints as Assert;
 
 class RequestUpdateClassRoomActive implements RequestableInterface
 {
 
     /**
-     * @var bool
-     *
-     * @Constraints\NotNull()
-     * @Constraints\Type(type="boolean")
+     * @Assert\NotNull()
      */
-    public $isActive;
+    public bool $isActive;
 }

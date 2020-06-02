@@ -11,29 +11,25 @@ use Ramsey\Uuid\Uuid;
 class ClassRoom
 {
     /**
-     * @var string
      * @ORM\Id()
      * @ORM\Column(type="guid")
      */
-    private $id;
+    private string $id;
 
     /**
-     * @var string
      * @ORM\Column(type="string", length=63)
      */
-    private $name;
+    private string $name;
 
     /**
-     * @var \DateTimeImmutable
      * @ORM\Column(type="datetime_immutable")
      */
-    private $createdAt;
+    private \DateTimeImmutable $createdAt;
 
     /**
-     * @var bool
      * @ORM\Column(type="boolean")
      */
-    private $isActive = true;
+    private bool $isActive = true;
 
     protected function __construct(string $id, string $name)
     {

@@ -8,15 +8,8 @@ use Doctrine\ORM\EntityManagerInterface;
 class ClassRoomListQuery
 {
 
-    /**
-     * @var EntityManagerInterface
-     */
-    private $em;
+    private EntityManagerInterface $em;
 
-    /**
-     * ListClassRoomQuery constructor.
-     * @param EntityManagerInterface $em
-     */
     public function __construct(EntityManagerInterface $em)
     {
         $this->em = $em;
