@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1842afb7eb10994aa2968a9593d56f79",
+    "content-hash": "8d3a78e063cd3f20a436b754ba36a800",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -1573,16 +1573,16 @@
         },
         {
             "name": "mcc-api-tools/request-object-bundle",
-            "version": "0.1.0",
+            "version": "0.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/iliabox/request-object-bundle.git",
-                "reference": "f9332c6b6499272517abf5abde4cd75c97847076"
+                "reference": "ff36d278ac8181327270b442c10140f57e81ec13"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/iliabox/request-object-bundle/zipball/f9332c6b6499272517abf5abde4cd75c97847076",
-                "reference": "f9332c6b6499272517abf5abde4cd75c97847076",
+                "url": "https://api.github.com/repos/iliabox/request-object-bundle/zipball/ff36d278ac8181327270b442c10140f57e81ec13",
+                "reference": "ff36d278ac8181327270b442c10140f57e81ec13",
                 "shasum": ""
             },
             "require": {
@@ -1620,7 +1620,7 @@
                 }
             ],
             "description": "Simple RequestObject",
-            "time": "2020-05-30T01:46:57+00:00"
+            "time": "2020-06-03T01:56:08+00:00"
         },
         {
             "name": "nelmio/api-doc-bundle",

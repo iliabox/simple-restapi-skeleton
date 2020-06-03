@@ -2,10 +2,10 @@
 
 namespace App\RequestObject;
 
-use MccApiTools\RequestObjectBundle\Model\RequestableInterface;
+use MccApiTools\RequestObjectBundle\Model\RequestObjectInterface;
 use Symfony\Component\Validator\Constraints as Assert;
 
-class RequestCreateClassRoom implements RequestableInterface
+class RequestCreateClassRoom implements RequestObjectInterface
 {
     /**
      * @Assert\NotBlank()
